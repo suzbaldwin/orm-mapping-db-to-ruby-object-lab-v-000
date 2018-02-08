@@ -96,7 +96,7 @@ def self.first_X_students_in_grade_10(grade)
   sql = <<-SQL
   SELECT COUNT (grade) FROM students WHERE grade = 10
   SQL
-  DB[:conn].execute(sql).first
+  DB[:conn].execute(sql).first_X_students.size
 
    end
 
